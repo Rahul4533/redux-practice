@@ -4,12 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState={
     notes: [
-        {
-            text:'Hello rahul'
-        },
-        {
-            text:"Text 2"
-        }
+       
     ],
     count:0,
 };
@@ -60,7 +55,8 @@ const noteslice=createSlice({
             })
         },
         delete:(state,action)=>{
-            state.notes.splice(action.payload,1);
+            state.notes.splice(action.payload,1)
+            state.count--
         },
         count:(state,action)=>{
             state.count=state.count+1
