@@ -3,3 +3,7 @@
   color: red;
   background-color: yellow;
 }
+.check{
+  display: flex;
+  margin-right: 50px ;
+}

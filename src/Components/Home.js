@@ -25,7 +25,7 @@ export default function Home() {
             onChange={(e) => setName(e.target.value)}
             
           />
-          <button type="submit" onClick={()=>dispatch(actions.count())} >
+          <button type="submit"  onClick={()=>dispatch(actions.count())} >
             Submit
           </button>
           <p>{count}</p>
