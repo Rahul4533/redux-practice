@@ -61,6 +61,9 @@ const noteslice=createSlice({
         },
         delete:(state,action)=>{
             state.notes.splice(action.payload,1);
+        },
+        count:(state,action)=>{
+            state.count=state.count+1
         }
     }
 });

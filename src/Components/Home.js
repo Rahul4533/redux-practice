@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Count, addNote } from "../Redux/Actions/note";
+//import { Count, addNote } from "../Redux/Actions/note";
 import { actions } from "../Redux/Reducers/notereducrs";
 export default function Home() {
-  let count = useSelector((state) => state.count);
+  let count = useSelector((state) => state.Reducer.count);
   console.log(count);
   const [name, setName] = useState("");
     const dispatch = useDispatch();
@@ -25,7 +25,7 @@ export default function Home() {
             onChange={(e) => setName(e.target.value)}
             
           />
-          <button type="submit" onClick={()=>dispatch(Count())} >
+          <button type="submit" onClick={()=>dispatch(actions.count())} >
             Submit
           </button>
           <p>{count}</p>

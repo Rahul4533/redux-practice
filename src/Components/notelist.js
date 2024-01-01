@@ -2,7 +2,7 @@ import { useSelector,useDispatch } from "react-redux";
 //import { deleteNote } from "../Redux/Actions/note";
 import { actions } from "../Redux/Reducers/notereducrs";
 export default function List(){
-const notes=useSelector((state)=>(state.notes));
+const notes=useSelector((state)=>(state.Reducer.notes));
 console.log(useSelector((state)=>state));
 const dispatch=useDispatch();
 
