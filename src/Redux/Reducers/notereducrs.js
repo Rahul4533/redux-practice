@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 //import { ADD_Note ,Delete_Note, Increase_Count} from "../Actions/note";
 import { createSlice } from "@reduxjs/toolkit";
 //Initilaze the State
@@ -7,6 +8,7 @@ const initialState={
        
     ],
     count:0,
+    
 };
 
 // export function noteReducer(state=initialState,action){
@@ -60,11 +62,17 @@ const noteslice=createSlice({
         },
         count:(state,action)=>{
             state.count=state.count+1
-        }
-    }
+        },
+       
+    
+    },
+
+   
 });
 
-export const Reducer=noteslice.reducer;
+export const Reducers=noteslice.reducer;
 export const actions=noteslice.actions;
+export const notereducer=(state)=> state.Reducers.notes;
+
 
    

@@ -2,11 +2,13 @@ import { useSelector,useDispatch } from "react-redux";
 //import { deleteNote } from "../Redux/Actions/note";
 import { actions } from "../Redux/Reducers/notereducrs";
 import { useState } from "react";
+import { notereducer } from "../Redux/Reducers/notereducrs";
 export default function List(){
-const notes=useSelector((state)=>(state.Reducer.notes));
-const [isclicked,setclick]=useState([false]);
+const notes=useSelector(notereducer);
+const [isclicked,setclick]=useState([false,false,false,false,]);
 
 const handelcheckbox=(index)=>{
+    
    const updatecheckbox=[...isclicked];
    updatecheckbox[index]=!updatecheckbox[index];
    setclick(updatecheckbox);
