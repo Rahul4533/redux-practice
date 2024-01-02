@@ -15,6 +15,9 @@ const notificationSlice=createSlice({
     },
     extraReducers: (builder)=>{
         builder.addCase(actions.add,(state,action)=> {state.message="Note Is Added"})
+        builder.addCase(actions.delete,(state,action)=>{
+            state.message="Note Is Deleted";
+        })
     }
 
     // extraReducers: {
