@@ -12,7 +12,7 @@ const handelcheckbox=(index)=>{
    const updatecheckbox=[...isclicked];
    updatecheckbox[index]=!updatecheckbox[index];
    setclick(updatecheckbox);
-   console.log(updatecheckbox,index);
+   
 
 }
 const dispatch=useDispatch();

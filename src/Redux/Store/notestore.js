@@ -4,6 +4,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { notificationReducer } from "../Reducers/notificationReducer";
 import { Reducers} from "../Reducers/notereducrs";
+import loggerMiddleWare  from "../middleware/loggerMiddleWare";
 // export const store=redux.createStore(noteReducer);
 
 export const store=configureStore({
@@ -11,4 +12,9 @@ export const store=configureStore({
          Reducers,
          notificationReducer,
     },
+    middleware:  ()=>{
+        return [loggerMiddleWare];
+    }
+        
+    
 })
